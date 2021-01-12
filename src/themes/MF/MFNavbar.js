@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   AppBar,
@@ -6,14 +7,10 @@ import {
   Typography,
 } from '@material-ui/core';
 
-const MFNavbar = () => (
-  <AppBar position="static">
-    <Toolbar>
-      <Typography variant="h6">
-        News
-      </Typography>
-    </Toolbar>
-  </AppBar>
-);
+const MFNavbar = ({children}) => <AppBar position="static">{children}</AppBar>;
+
+MFNavbar.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default MFNavbar;
