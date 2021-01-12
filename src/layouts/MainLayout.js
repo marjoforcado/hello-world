@@ -7,6 +7,10 @@ import {
 } from 'gatsby';
 
 import {
+  Container,
+} from '@material-ui/core';
+
+import {
   Navbar,
 } from '@shared/components';
 
@@ -28,7 +32,9 @@ const MainLayout = props => {
   return (
     <>
       <Navbar siteTitle={data.site.siteMetadata?.title || 'Title'} />
-      <div>{children}</div>
+      <Container>
+        {children}
+      </Container>
     </>
   );
 };
