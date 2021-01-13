@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   pathPrefix: '/hello-world',
   siteMetadata: {
@@ -32,15 +34,13 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@src': 'src',
-          '@components': 'src/components',
-          '@layouts': 'src/layouts',
-          '@pages': 'src/pages',
-          '@sass': 'src/sass',
-          '@templates': 'src/templates',
-          '@posts': 'content/posts',
-          '@shared': 'src/shared',
-          '@themes': 'src/themes',
+          '@src': path.resolve(__dirname, 'src'),
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@layouts': path.resolve(__dirname, 'src/layouts'),
+          '@pages': path.resolve(__dirname, 'src/pages'),
+          '@templates': path.resolve(__dirname, 'src/templates'),
+          '@shared': path.resolve(__dirname, 'src/shared'),
+          '@themes': path.resolve(__dirname, 'src/themes'),
         },
         extensions: [
           'js',

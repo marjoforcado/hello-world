@@ -1,5 +1,5 @@
-import MFNavbar from './MFNavbar';
+import MFAppBar from './MFAppBar';
 
 export {
-  MFNavbar,
+  MFAppBar,
 };

@@ -8,13 +8,14 @@ import {
 
 import {
   Container,
+  CssBaseline,
 } from '@material-ui/core';
 
 import {
   Navbar,
 } from '@shared/components';
 
-const MainLayout = props => {
+const MainLayout = (props) => {
   const { children } = props;
 
   const data = useStaticQuery(
@@ -31,6 +32,7 @@ const MainLayout = props => {
 
   return (
     <>
+      <CssBaseline />
       <Navbar siteTitle={data.site.siteMetadata?.title || 'Title'} />
       <Container>
         {children}

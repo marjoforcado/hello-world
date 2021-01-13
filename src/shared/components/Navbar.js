@@ -4,17 +4,18 @@ import { Link } from 'gatsby';
 import { Typography } from '@material-ui/core';
 
 import {
-  MFNavbar,
+  MFAppBar,
 } from '@themes/MF';
 
 const Navbar = ({siteTitle}) => (
-  <MFNavbar>
+  <MFAppBar color="primary"
+            position="static">
     <Typography variant="h6">
       <Link to="/">
         {siteTitle}
       </Link>
     </Typography>
-  </MFNavbar>
+  </MFAppBar>
 );
 
 export default Navbar;
