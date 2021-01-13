@@ -48,11 +48,12 @@ const MainLayout = (props) => {
       </Box>
       <Box style={{
              width: `calc(100% - ${sidebarWidth}px)`,
-             position: 'fixed',
+             position: 'absolute',
              right: 0,
+             height: '100%',
            }}>
         <Navbar siteTitle={data.site.siteMetadata?.title || 'Title'} />
-        <Container>
+        <Container className="py-3">
           {children}
         </Container>
       </Box>

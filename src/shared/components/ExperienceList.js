@@ -3,7 +3,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import {
+  Button,
   Card,
+  CardActions,
   CardContent,
   Chip,
   Grid,
@@ -27,7 +29,7 @@ const experiences = [
     description: 'Received bachelors degree in Information Technology June 2016.',
   },
   {
-    id: 2,
+    id: 3,
     title: 'HC Consumer Finance Philippines INC - Web Developer',
     icon: 'fa-briefcase',
     subtitle: 'July 2018 - Oct 2019',
@@ -39,7 +41,7 @@ const experiences = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Nisade Alpine Development - Software Engineer',
     icon: 'fa-briefcase',
     subtitle: 'Oct 2019 - Dec 2020',
@@ -61,9 +63,7 @@ const ExperienceCard = experience => {
       maxWidth: '500px',
     },
   }))();
-
-  console.log(experience);
-
+  
   return (
     <Card className="my-2"
           classes={{
@@ -84,19 +84,35 @@ const ExperienceCard = experience => {
                       variant="body2">
           {experience.experience.description}
         </MFTypography>
-        <Chip size="small"
-              label="Graduation" />
-        <Chip size="small"
-              label="PHP" />
-        <Chip size="small"
-              label="MySQL" />
+        <Grid spacing={1}
+              container>
+          <Grid item>
+            <Chip size="small"
+                  label="Graduation" />
+          </Grid>
+          <Grid item>
+            <Chip size="small"
+                  label="PHP" />
+          </Grid>
+          <Grid item>
+            <Chip size="small"
+                label="MySQL" />
+          </Grid>
+        </Grid>
       </CardContent>
+      <CardActions className="text-center">
+        <Button size="small"
+                color="primary"
+                variant="text"
+                fullWidth>Learn More</Button>
+      </CardActions>
     </Card>
   );
 };
 
 const ExperienceList = () => {
-  return experiences.map(experience => <ExperienceCard key={experience.id}
+  return experiences.reverse()
+                    .map(experience => <ExperienceCard key={experience.id}
                                                        experience={experience} />);
 };
 
