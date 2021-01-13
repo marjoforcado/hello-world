@@ -1,6 +1,15 @@
 import React from 'react';
 
+import {
+  Card,
+  CardContent,
+} from '@material-ui/core';
+
 import MainLayout from '@layouts/MainLayout';
+
+import {
+  MFTypography,
+} from '@themes/MF';
 
 import {
   SEO,
@@ -9,7 +18,18 @@ import {
 const IndexPage = () => (
   <MainLayout>
     <SEO title="Home" />
-    <h1>Hello world!</h1>
+    <MFTypography variant="h3"
+                align="center">@Mrjfrcdo</MFTypography>
+    <MFTypography variant="h5">Experiences</MFTypography>
+    <Card>
+      <CardContent>
+        <MFTypography variant="body"
+                    color="primary"
+                    component="p">
+          Lorem ipsum dolor sith ameth
+        </MFTypography>
+      </CardContent>
+    </Card>
   </MainLayout>
 );
 
