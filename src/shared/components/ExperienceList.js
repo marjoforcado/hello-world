@@ -65,7 +65,8 @@ const ExperienceCard = experience => {
   console.log(experience);
 
   return (
-    <Card classes={{
+    <Card className="my-2"
+          classes={{
             root: classes.cardRoot,
           }}>
       <CardContent>
