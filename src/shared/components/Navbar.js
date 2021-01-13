@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { Typography } from '@material-ui/core';
+import {
+  Container,
+  Typography,
+} from '@material-ui/core';
 
 import {
   MFAppBar,
@@ -10,11 +13,13 @@ import {
 const Navbar = ({siteTitle}) => (
   <MFAppBar color="primary"
             position="static">
-    <Typography variant="h6">
-      <Link to="/">
-        {siteTitle}
-      </Link>
-    </Typography>
+    <Container>
+      <Typography variant="h6">
+        <Link to="/">
+          {siteTitle}
+        </Link>
+      </Typography>
+    </Container>
   </MFAppBar>
 );
 
