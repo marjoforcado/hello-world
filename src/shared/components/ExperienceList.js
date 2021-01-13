@@ -111,9 +111,16 @@ const ExperienceCard = experience => {
 };
 
 const ExperienceList = () => {
-  return experiences.reverse()
-                    .map(experience => <ExperienceCard key={experience.id}
-                                                       experience={experience} />);
+  return (
+    <>
+      <MFTypography variant="h5">Experiences</MFTypography>
+      {
+        experiences.reverse()
+                   .map(experience => <ExperienceCard key={experience.id}
+                                                      experience={experience} />)
+      }
+    </>
+  );
 };
 
 export default ExperienceList;

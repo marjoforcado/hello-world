@@ -7,6 +7,7 @@ import { MFTypography } from '@themes/MF';
 import {
   ExperienceList,
   SEO,
+  ToolsList,
 } from '@shared/components';
 
 const IndexPage = () => (
@@ -14,8 +15,8 @@ const IndexPage = () => (
     <SEO title="Home" />
     <MFTypography variant="h3"
                   align="center">@Mrjfrcdo</MFTypography>
-    <MFTypography variant="h5">Experiences</MFTypography>
     <ExperienceList />
+    <ToolsList />
   </MainLayout>
 );
 
