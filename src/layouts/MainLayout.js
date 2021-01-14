@@ -7,10 +7,8 @@ import {
 } from 'gatsby';
 
 import {
-  Box,
   Container,
   CssBaseline,
-  Grid,
 } from '@material-ui/core';
 
 import {
@@ -20,8 +18,6 @@ import {
 
 const MainLayout = props => {
   const { children } = props;
-
-  const sidebarWidth = 250;
 
   const data = useStaticQuery(
     graphql`
@@ -39,7 +35,7 @@ const MainLayout = props => {
     <>
       <CssBaseline />
       <Navbar siteTitle={data.site.siteMetadata?.title || 'Title'} />
-      <Container>
+      <Container className="py-5">
         {children}
       </Container>
       <Footer />

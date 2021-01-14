@@ -25,7 +25,7 @@ const BlogList = () => {
   return (
     <Paper elevation={0}
            variant="outlined">
-      {/* <MFTypography variant="h5">I wrote these</MFTypography> */}
+      {/* <MFTypography variant="h6">Blog posts</MFTypography> */}
       <Grid direction="column"
             alignItems="stretch"
             container>
