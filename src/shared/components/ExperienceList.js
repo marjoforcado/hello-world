@@ -113,12 +113,21 @@ const ExperienceCard = experience => {
 const ExperienceList = () => {
   return (
     <>
-      <MFTypography variant="h5">Experiences</MFTypography>
-      {
-        experiences.reverse()
-                   .map(experience => <ExperienceCard key={experience.id}
-                                                      experience={experience} />)
-      }
+      <MFTypography align="center"
+                    variant="h5">Experiences</MFTypography>
+      <Grid direction="column"
+            alignItems="center"
+            container>
+        {
+          experiences.reverse()
+                     .map(experience => (
+                       <Grid key={experience.id}
+                             item>
+                         <ExperienceCard experience={experience} />
+                       </Grid>
+                     ))
+        }
+      </Grid>
     </>
   );
 };

@@ -21,32 +21,11 @@ const tools = [
     rating: 5,
   },
   {
-    id: 2,
-    icon: 'fab fa-sass',
-    color: '#cc6699',
-    title: 'sass',
-    rating: 4,
-  },
-  {
     id: 3,
     icon: 'fab fa-js-square',
     color: '#f0db4f',
     title: 'javascript',
     rating: 5,
-  },
-  {
-    id: 4,
-    icon: 'fab fa-aws',
-    color: '#ff9900',
-    title: 'aws',
-    rating: 2,
-  },
-  {
-    id: 5,
-    icon: 'fab fa-docker',
-    color: '#0db7ed',
-    title: 'docker',
-    rating: 2,
   },
   {
     id: 6,
@@ -56,11 +35,32 @@ const tools = [
     rating: 5,
   },
   {
-    id: 7,
-    icon: 'fab fa-angular',
-    color: '#b52e31',
-    title: 'angular',
-    rating: 2,
+    id: 11,
+    icon: 'fab fa-github',
+    title: 'github',
+    color: '#f1502f',
+    rating: 5,
+  },
+  {
+    id: 14,
+    icon: 'fab fa-bootstrap',
+    title: 'bootstrap',
+    color: '#602c50',
+    rating: 5,
+  },
+  {
+    id: 2,
+    icon: 'fab fa-sass',
+    color: '#cc6699',
+    title: 'sass',
+    rating: 5,
+  },
+  {
+    id: 13,
+    icon: 'fab fa-laravel',
+    title: 'laravel',
+    color: '#fb503b',
+    rating: 4,
   },
   {
     id: 8,
@@ -84,13 +84,6 @@ const tools = [
     rating: 3,
   },
   {
-    id: 11,
-    icon: 'fab fa-github',
-    title: 'github',
-    color: '#f1502f',
-    rating: 5,
-  },
-  {
     id: 12,
     icon: 'fab fa-node-js',
     title: 'nodejs',
@@ -98,18 +91,25 @@ const tools = [
     rating: 3,
   },
   {
-    id: 13,
-    icon: 'fab fa-laravel',
-    title: 'laravel',
-    color: '#fb503b',
-    rating: 4,
+    id: 4,
+    icon: 'fab fa-aws',
+    color: '#ff9900',
+    title: 'aws',
+    rating: 2,
   },
   {
-    id: 14,
-    icon: 'fab fa-bootstrap',
-    title: 'bootstrap',
-    color: '#602c50',
-    rating: 5,
+    id: 5,
+    icon: 'fab fa-docker',
+    color: '#0db7ed',
+    title: 'docker',
+    rating: 2,
+  },
+  {
+    id: 7,
+    icon: 'fab fa-angular',
+    color: '#b52e31',
+    title: 'angular',
+    rating: 2,
   },
 ];
 
@@ -145,7 +145,9 @@ const ToolCard = props => {
 const ToolsList = () => {
   return (
     <>
-      <MFTypography variant="h5">Package.json</MFTypography>
+      <MFTypography align="center"
+                    className="mb-3"
+                    variant="h5">My Packages</MFTypography>
       <Grid justify="center"
             spacing={2}
             container>
