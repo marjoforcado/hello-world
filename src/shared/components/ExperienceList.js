@@ -26,14 +26,22 @@ const experiences = [
     title: 'FFUF Manila - Web Developer',
     icon: 'fa-briefcase',
     subtitle: 'June 2016 - July 2018',
-    description: 'Received bachelors degree in Information Technology June 2016.',
+    description: `
+      Worked in collaboration as a web developer, 
+      using Angular and PHP for developing web applications, 
+      converting web designs to HTML/CSS/Javascript.
+    `,
   },
   {
     id: 3,
     title: 'HC Consumer Finance Philippines INC - Web Developer',
     icon: 'fa-briefcase',
     subtitle: 'July 2018 - Oct 2019',
-    description: 'Received bachelors degree in Information Technology June 2016.',
+    description: `
+      Worked in collaboration with an agile team, developed internal tools using
+      Vuejs and Laravel, discussing UI/UX ideas to make applications accessible for our
+      stakeholders.
+    `,
     tags: [
       'PHP',
       'Laravel',
@@ -45,7 +53,10 @@ const experiences = [
     title: 'Nisade Alpine Development - Software Engineer',
     icon: 'fa-briefcase',
     subtitle: 'Oct 2019 - Dec 2020',
-    description: 'Received bachelors degree in Information Technology June 2016.',
+    description: `
+      Worked as a solo fullstack software engineer, developing the company's cloud architecture using
+      AWS, API development using Laravel and UI/UX using React.
+    `,
     tags: [
       'AWS',
       'MySql',
