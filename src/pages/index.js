@@ -36,8 +36,9 @@ const IndexPage = () => (
                src={displayImage} />
           <Box className="p-3">
             <MFTypography variant="subtitle2">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              Responsible, career driven with a strong personality, 
+              loves to express ideas and opinions especially when working with a team. 
+              Can work with minimal or no supervision.
             </MFTypography>
           </Box>
         </Paper>

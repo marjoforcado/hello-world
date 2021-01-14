@@ -16,36 +16,47 @@ import { MFTypography } from '@themes/MF';
 const experiences = [
   {
     id: 1,
-    title: 'FEU Intitute of Technology - Bachelors Degree',
+    title: 'FEU Institute of Technology - Bachelors Degree',
     icon: 'fa-user-graduate',
     subtitle: 'June 2016',
-    description: 'Received bachelors degree in Information Technology June 2016.',
+    description: 'Received bachelors degree in Information Technology.',
+    tags: [
+      'Graduation',
+      'Degree Holder',
+      'Education',
+    ],
   },
   {
     id: 2,
     title: 'FFUF Manila - Web Developer',
     icon: 'fa-briefcase',
-    subtitle: 'June 2016 - July 2018',
+    subtitle: 'Jun 2016 - Jul 2018',
     description: `
-      Worked in collaboration as a web developer, 
-      using Angular and PHP for developing web applications, 
-      converting web designs to HTML/CSS/Javascript.
-    `,
-  },
-  {
-    id: 3,
-    title: 'HC Consumer Finance Philippines INC - Web Developer',
-    icon: 'fa-briefcase',
-    subtitle: 'July 2018 - Oct 2019',
-    description: `
-      Worked in collaboration with an agile team, developed internal tools using
-      Vuejs and Laravel, discussing UI/UX ideas to make applications accessible for our
-      stakeholders.
+      Worked in collaboration as a web developer,
+      using Angular and PHP for developing web applications,
+      converting web designs from Zeplin to HTML/CSS/Javascript.
     `,
     tags: [
       'PHP',
-      'Laravel',
+      'Angular',
+      'Javascript',
+      'SASS',
+    ],
+  },
+  {
+    id: 3,
+    title: 'HC Consumer Finance Philippines Inc. - Web Developer',
+    icon: 'fa-briefcase',
+    subtitle: 'Jul 2018 - Oct 2019',
+    description: `
+      Worked in collaboration with an agile team, developed iternal tools using
+      Vuejs and Laravel, discussing UI/UX ideas to make applications accessible for
+      stakeholders.
+    `,
+    tags: [
       'Vue',
+      'Laravel',
+      'Agile Development',
     ],
   },
   {
@@ -54,27 +65,28 @@ const experiences = [
     icon: 'fa-briefcase',
     subtitle: 'Oct 2019 - Dec 2020',
     description: `
-      Worked as a solo fullstack software engineer, developing the company's cloud architecture using
-      AWS, API development using Laravel and UI/UX using React.
+      Worked as a solo fullstack software engineer, developing the company's cloud architecture
+      using AWS, API Development using Laravel and UI/UX using React.
     `,
     tags: [
       'AWS',
-      'MySql',
-      'PHP',
+      'MySQL',
       'Laravel',
       'React',
+      'Figma',
     ],
   },
 ];
 
-const ExperienceCard = experience => {
+const ExperienceCard = props => {
+  const { experience } = props;
+
   const classes = makeStyles(theme => ({
     cardRoot: {
       width: '100%',
-      // maxWidth: '500px',
     },
   }))();
-  
+
   return (
     <Card variant="outlined"
           elevation={0}
@@ -84,32 +96,28 @@ const ExperienceCard = experience => {
       <CardContent>
         <MFTypography variant="body2"
                       color="textSecondary">
-          {experience.experience.title}
-          &nbsp;
-          <i className={`fas ${experience.experience.icon}`} />
+          {experience.title} <i className={`fas ${experience.icon}`} />
         </MFTypography>
         <MFTypography className="mb-2"
                       variant="body2">
-          {experience.experience.subtitle}
+          {experience.subtitle}
         </MFTypography>
         <MFTypography className="mb-2"
                       variant="body2">
-          {experience.experience.description}
+          {experience.description}
         </MFTypography>
         <Grid spacing={1}
               container>
-          <Grid item>
-            <Chip size="small"
-                  label="Graduation" />
-          </Grid>
-          <Grid item>
-            <Chip size="small"
-                  label="PHP" />
-          </Grid>
-          <Grid item>
-            <Chip size="small"
-                label="MySQL" />
-          </Grid>
+          {
+            experience.tags?.map((tag, index) => (
+              <Grid key={index}
+                    item>
+                <Chip size="small"
+                      color="primary"
+                      label={tag} />
+              </Grid>
+            ))
+          }
         </Grid>
       </CardContent>
       <CardActions className="text-center">
@@ -125,24 +133,20 @@ const ExperienceCard = experience => {
 
 const ExperienceList = () => {
   return (
-    <>
-      {/* <MFTypography align="center"
-                    variant="h5">Experiences</MFTypography> */}
-      <Grid direction="column"
-            alignItems="stretch"
-            spacing={2}
-            container>
-        {
-          experiences.reverse()
-                     .map(experience => (
-                       <Grid key={experience.id}
-                             item>
-                         <ExperienceCard experience={experience} />
-                       </Grid>
-                     ))
-        }
-      </Grid>
-    </>
+    <Grid direction="column"
+          alignItems="stretch"
+          spacing={2}
+          container>
+      {
+        experiences.reverse()
+                   .map(experience => (
+                     <Grid key={experience.id}
+                           item>
+                      <ExperienceCard experience={experience} />
+                     </Grid>
+                   ))
+      }
+    </Grid>
   );
 };
 

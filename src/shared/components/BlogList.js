@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import {
+  Box,
   Card,
   CardActionArea,
   CardHeader,
@@ -25,7 +26,9 @@ const BlogList = () => {
   return (
     <Paper elevation={0}
            variant="outlined">
-      {/* <MFTypography variant="h6">Blog posts</MFTypography> */}
+      <Box className="py-2 px-3">
+        <MFTypography>Blogs</MFTypography>
+      </Box>
       <Grid direction="column"
             alignItems="stretch"
             container>
