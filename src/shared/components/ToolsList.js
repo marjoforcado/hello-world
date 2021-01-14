@@ -88,7 +88,7 @@ const tools = [
     icon: 'fab fa-node-js',
     title: 'nodejs',
     color: '#44883e',
-    rating: 3,
+    rating: 2,
   },
   {
     id: 4,

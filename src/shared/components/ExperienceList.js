@@ -116,7 +116,8 @@ const ExperienceCard = experience => {
         <Button size="small"
                 color="primary"
                 variant="text"
-                fullWidth>Learn More</Button>
+                fullWidth
+                disableRipple>Learn More</Button>
       </CardActions>
     </Card>
   );

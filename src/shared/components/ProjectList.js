@@ -12,7 +12,7 @@ import {
 
 import { MFTypography } from '@themes/MF';
 
-const BlogList = () => {
+const ProjectList = () => {
   const classes = makeStyles(theme => ({
     title: {
       fontSize: '20px',
@@ -60,4 +60,4 @@ const BlogList = () => {
   );
 };
 
-export default BlogList;
+export default ProjectList;

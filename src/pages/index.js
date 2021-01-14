@@ -14,6 +14,7 @@ import { MFTypography } from '@themes/MF';
 import {
   BlogList,
   ExperienceList,
+  ProjectList,
   SEO,
   ToolsList,
 } from '@shared/components';
@@ -34,36 +35,45 @@ const IndexPage = () => (
           <img className="mb-0"
                src={displayImage} />
           <Box className="p-3">
-            <MFTypography>
-              77-B Magat Salamat St., Brgy. Marilag, Proj. 4, Quezon City,
-              Philippines, 1109
-            </MFTypography>
-            <hr />
-            <MFTypography>
-              (+63) 9992 099 074
-            </MFTypography>
-            <Link href="mailto:marjoforcado@gmail.com">
-              marjoforcado@gmail.com
-            </Link>
-            <br />
-            <Link href="https://linkedin.com/in/marjoforcado">
-              linkedin.com/in/marjoforcado
-            </Link>
-            <br />
-            <Link href="https://github.com/marjoforcado">
-              github.com/marjoforcado
-            </Link>
-            <hr />
-            <MFTypography>
-              b.s. information technology
-            </MFTypography>
-            <MFTypography>
-              feu institute of technology
-            </MFTypography>
-            <MFTypography>
-              2012 - 2016
+            <MFTypography variant="subtitle2">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             </MFTypography>
           </Box>
+        </Paper>
+        <br />
+        <Paper variant="outlined"
+               className="p-3"
+               elevation={0}>
+          <MFTypography>
+            77-B Magat Salamat St., Brgy. Marilag, Proj. 4, Quezon City,
+            Philippines, 1109
+          </MFTypography>
+          <hr />
+          <MFTypography>
+            (+63) 9992 099 074
+          </MFTypography>
+          <Link href="mailto:marjoforcado@gmail.com">
+            marjoforcado@gmail.com
+          </Link>
+          <br />
+          <Link href="https://linkedin.com/in/marjoforcado">
+            linkedin.com/in/marjoforcado
+          </Link>
+          <br />
+          <Link href="https://github.com/marjoforcado">
+            github.com/marjoforcado
+          </Link>
+          <hr />
+          <MFTypography>
+            b.s. information technology
+          </MFTypography>
+          <MFTypography>
+            feu institute of technology
+          </MFTypography>
+          <MFTypography>
+            2012 - 2016
+          </MFTypography>
         </Paper>
       </Grid>
       <Grid xs={5}
@@ -73,6 +83,8 @@ const IndexPage = () => (
       <Grid xs={4}
             item>
         <BlogList />
+        <br />
+        <ProjectList />
       </Grid>
     </Grid>
     <br />
