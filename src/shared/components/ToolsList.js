@@ -145,9 +145,9 @@ const ToolCard = props => {
 const ToolsList = () => {
   return (
     <>
-      <MFTypography align="center"
+      {/* <MFTypography align="center"
                     className="mb-3"
-                    variant="h5">My Packages</MFTypography>
+                    variant="h5">My Packages</MFTypography> */}
       <Grid justify="center"
             spacing={2}
             container>
