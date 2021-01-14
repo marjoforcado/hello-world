@@ -9,6 +9,7 @@ import MainLayout from '@layouts/MainLayout';
 import { MFTypography } from '@themes/MF';
 
 import {
+  BlogList,
   ExperienceList,
   SEO,
   ToolsList,
@@ -19,14 +20,15 @@ const IndexPage = () => (
     <SEO title="Home" />
     <MFTypography variant="h3"
                   align="center">@Mrjfrcdo</MFTypography>
-    <Grid spacing={3}
+    <Grid spacing={5}
           container>
-      <Grid xs={9}
+      <Grid xs={8}
             item>
         <ExperienceList />
       </Grid>
-      <Grid xs={3}>
-        <p>lsadasdsad</p>
+      <Grid xs={4}
+            item>
+        <BlogList />
       </Grid>
     </Grid>
     <ToolsList />

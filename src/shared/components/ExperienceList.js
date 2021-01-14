@@ -60,12 +60,13 @@ const ExperienceCard = experience => {
   const classes = makeStyles(theme => ({
     cardRoot: {
       width: '100%',
-      maxWidth: '500px',
+      // maxWidth: '500px',
     },
   }))();
   
   return (
-    <Card className="my-2"
+    <Card className="border"
+          elevation={0}
           classes={{
             root: classes.cardRoot,
           }}>
@@ -113,10 +114,11 @@ const ExperienceCard = experience => {
 const ExperienceList = () => {
   return (
     <>
-      <MFTypography align="center"
-                    variant="h5">Experiences</MFTypography>
+      {/* <MFTypography align="center"
+                    variant="h5">Experiences</MFTypography> */}
       <Grid direction="column"
-            alignItems="center"
+            alignItems="stretch"
+            spacing={2}
             container>
         {
           experiences.reverse()
