@@ -45,12 +45,14 @@ const IndexPage = () => (
             <Link href="mailto:marjoforcado@gmail.com">
               marjoforcado@gmail.com
             </Link>
-            <MFTypography>
+            <br />
+            <Link href="https://linkedin.com/in/marjoforcado">
               linkedin.com/in/marjoforcado
-            </MFTypography>
-            <MFTypography>
+            </Link>
+            <br />
+            <Link href="https://github.com/marjoforcado">
               github.com/marjoforcado
-            </MFTypography>
+            </Link>
             <hr />
             <MFTypography>
               b.s. information technology
