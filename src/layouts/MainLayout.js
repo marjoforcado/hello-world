@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core';
 
 import {
+  Footer,
   Navbar,
 } from '@shared/components';
 
@@ -56,6 +57,7 @@ const MainLayout = (props) => {
         <Container className="py-3">
           {children}
         </Container>
+        <Footer />
       </Box>
     </>
   );

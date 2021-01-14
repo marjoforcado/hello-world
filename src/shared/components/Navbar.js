@@ -12,7 +12,7 @@ import {
 
 const Navbar = ({siteTitle}) => (
   <MFAppBar color="primary"
-            position="static">
+            position="sticky">
     <Container>
       <Typography variant="h6">
         <Link to="/">
