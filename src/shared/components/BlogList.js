@@ -23,8 +23,8 @@ const BlogList = () => {
   }))();
 
   return (
-    <Paper className="border"
-           elevation={0}>
+    <Paper elevation={0}
+           variant="outlined">
       {/* <MFTypography variant="h5">I wrote these</MFTypography> */}
       <Grid direction="column"
             alignItems="stretch"

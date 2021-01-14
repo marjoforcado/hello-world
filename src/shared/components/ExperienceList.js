@@ -65,7 +65,7 @@ const ExperienceCard = experience => {
   }))();
   
   return (
-    <Card className="border"
+    <Card variant="outlined"
           elevation={0}
           classes={{
             root: classes.cardRoot,
