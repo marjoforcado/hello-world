@@ -3,17 +3,14 @@ import classNames from 'classnames';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import {
-  Rating,
-} from '@material-ui/lab';
+import { Rating } from '@material-ui/lab';
 
 import {
   Box,
+  Grid,
 } from '@material-ui/core';
 
-import {
-  MFTypography,
-} from '@themes/MF';
+import { MFTypography } from '@themes/MF';
 
 const tools = [
   {
@@ -40,8 +37,8 @@ const tools = [
   {
     id: 4,
     icon: 'fab fa-aws',
-    color: '#FF9900',
-    title: 'AWS',
+    color: '#ff9900',
+    title: 'aws',
     rating: 2,
   },
   {
@@ -54,21 +51,21 @@ const tools = [
   {
     id: 6,
     icon: 'fab fa-react',
-    color: '#61DBFB',
+    color: '#61dbfb',
     title: 'react',
     rating: 5,
   },
   {
     id: 7,
     icon: 'fab fa-angular',
-    color: '#B52E31',
+    color: '#b52e31',
     title: 'angular',
     rating: 2,
   },
   {
     id: 8,
     icon: 'fab fa-vuejs',
-    color: '#41B883',
+    color: '#41b883',
     title: 'vue',
     rating: 3,
   },
@@ -83,14 +80,14 @@ const tools = [
     id: 10,
     icon: 'fas fa-database',
     title: 'mysql',
-    color: '#2c3e50',
+    color: '#3c3e50',
     rating: 3,
   },
   {
     id: 11,
     icon: 'fab fa-github',
     title: 'github',
-    color: '#F1502F',
+    color: '#f1502f',
     rating: 5,
   },
   {
@@ -100,32 +97,45 @@ const tools = [
     color: '#44883e',
     rating: 3,
   },
+  {
+    id: 13,
+    icon: 'fab fa-laravel',
+    title: 'laravel',
+    color: '#fb503b',
+    rating: 4,
+  },
+  {
+    id: 14,
+    icon: 'fab fa-bootstrap',
+    title: 'bootstrap',
+    color: '#602c50',
+    rating: 5,
+  },
 ];
 
 const ToolCard = props => {
   const { tool } = props;
 
   const classes = makeStyles(theme => ({
-    boxRoot: {
+    root: {
       display: 'inline-block',
       textAlign: 'center',
     },
-    root: {
+    iconRoot: {
       fontSize: '55px',
       color: tool.color || theme.palette.text.secondary,
     },
   }))();
 
   return (
-    <Box className={classes.boxRoot}>
-      <i className={classNames(classes.root, tool.icon)} />
+    <Box className={classes.root}>
+      <i className={classNames(classes.iconRoot, tool.icon)} />
       <MFTypography variant="subtitle2"
                     className="text-uppercase">{tool.title}</MFTypography>
       <Box className="d-block">
-        <Rating name="read-only"
-                size="small"
+        <Rating size="small"
                 defaultValue={1}
-                value={tool.rating} 
+                value={tool.rating}
                 readOnly />
       </Box>
     </Box>
@@ -136,10 +146,18 @@ const ToolsList = () => {
   return (
     <>
       <MFTypography variant="h5">Package.json</MFTypography>
-      {
-        tools.map(tool => <ToolCard key={tool.id} 
-                                    tool={tool} />)
-      }
+      <Grid justify="center"
+            spacing={2}
+            container>
+        {
+          tools.map(tool => (
+            <Grid key={tool.id}
+                  item>
+              <ToolCard tool={tool} />
+            </Grid>
+          ))
+        }
+      </Grid>
     </>
   );
 };
