@@ -17,6 +17,8 @@ import {
   Navbar,
 } from '@shared/components';
 
+import displayImage from '@images/image-1.jpg';
+
 const MainLayout = (props) => {
   const { children } = props;
 
@@ -40,12 +42,12 @@ const MainLayout = (props) => {
       <Box style={{
           position: 'fixed',
           height: '100%',
-          backgroundColor: 'red',
+          // backgroundColor: process.env.APP_COLOR_PRIMARY,
           width: `${sidebarWidth}px`,
           top: 0,
           left: 0,
         }}>
-        Test
+        <img src={displayImage} />
       </Box>
       <Box style={{
              width: `calc(100% - ${sidebarWidth}px)`,

@@ -41,6 +41,7 @@ module.exports = {
           '@templates': path.resolve(__dirname, 'src/templates'),
           '@shared': path.resolve(__dirname, 'src/shared'),
           '@themes': path.resolve(__dirname, 'src/themes'),
+          '@images': path.resolve(__dirname, 'src/images'),
         },
         extensions: [
           'js',
