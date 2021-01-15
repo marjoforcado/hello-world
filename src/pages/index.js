@@ -30,8 +30,7 @@ const IndexPage = () => (
           container>
       <Grid xs={3}
             item>
-        <Paper variant="outlined"
-               elevation={0}>
+        <Paper elevation={0}>
           <img className="mb-0"
                src={displayImage} />
           <Box className="p-3">
